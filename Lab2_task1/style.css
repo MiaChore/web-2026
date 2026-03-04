@@ -21,6 +21,17 @@
     letter-spacing: -0.08px;
     width: 343px;
     height: 16px;
-    color: gray;
+    color: #808080;
+}
 
+.headlines{
+    font-family: Golos UI, sans-serif;
+    font-weight: 400;
+    font-style: regular;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+    width: 343px;
+    height: 18px;
+    color: #222222;
 }
