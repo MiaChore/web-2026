@@ -1,6 +1,26 @@
 .title {
-    width: 462px;
-    height: 501px;
+    font-family: Golos UI, sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 140px;
+    line-height: 180px;
+    letter-spacing: -1.5px;
+    width: 385px;
+    height: 180px;
     margin-top: 289px;
     margin-left: 269px;
+    color: #222222;
+}
+
+.description{
+    font-family: Golos UI, sans-serif;
+    font-weight: 400;
+    font-style: regular;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.08px;
+    width: 343px;
+    height: 16px;
+    color: gray;
+
 }
