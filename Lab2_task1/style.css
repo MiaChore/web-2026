@@ -79,8 +79,146 @@
    background-color: black;
    color: white;
    font-family: "Golos UI", sans-serif;
+   font-weight: 500;
+   font-style: medium;                    
    padding-right: 16px;
    padding-left: 16px;
    border-radius: 10px;
    margin-top: 50px;
+}
+
+.icons {
+    height: 24px;
+    filter: invert(100%);
+    margin-top: 16px;
+    margin-left: 24px;
+}
+
+.icons.pen {
+    margin: 0px;
+    margin-left: auto;
+    margin-top: 7px;
+}
+
+.headband {
+    position: fixed;
+    width: 1848px;
+    height: 73px;
+    margin-left: 72px;
+    background-color: white;
+}
+
+.back {
+    height: 1080px;
+    width: 72px;
+    border-right: 1px;
+    border-color: black;
+}
+
+.header {
+    font-family: "Golos UI", sans-serif;
+    font-weight: bold;
+    line-height: 60px;
+    letter-spacing: -1.5px;
+    text-align: center;
+    margin-right: 55px;
+    color: #222222;
+}
+
+.scroll_bar {
+    width: 474px;
+    height: 1338px;
+    top: 73px;
+    margin-left: 670px;
+    margin-top: 73px;
+    display: block;
+    gap: 16px;
+}
+
+.user_bar {
+    width: 474px;
+    height: 32px;
+    margin-top: 16px;
+    display: flex;
+}
+
+.user_photo {
+    width: 32px;
+    border-radius: 10px;
+}
+
+.nickname {
+    height: 18px;
+    font-family: "Golos UI", sans-serif;
+    font-weight: 500;
+    size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.15px;
+    vertical-align: middle;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.photo_post {
+   margin-top: 16px;
+   width: 474px; 
+}
+
+.photo_post.counter {
+    background-color: black transparent 50%;
+    color: white;
+    border-radius: 10px;
+    border-color: transparent;
+    width: 44px;
+    height: 24px;
+    font-family: "Golos UI", sans-serif;
+}
+
+.react_border {
+    margin-top: 16px;
+    background-color: #edf2f8;
+    border-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    width: 68px;
+    height: 30px;
+}
+
+.react_border.likes {
+    width: 16px;
+    height: 16px;
+    margin: 7px;
+}
+
+.react_border.counter {
+    width: 25px;
+    height: 18px;
+    font-family: "Golos UI", sans-serif;
+    font-size: 15px;
+    line-height: 18px; 
+    letter-spacing: -0.15px;
+    margin: 0px;
+    margin-top: 7px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.comments {
+    width: 474px;
+    height: 37px;
+    font-family: "Golos UI", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0,15px;
+    margin-bottom: 0px;
+}
+
+.comments.description {
+    height: 18px;
+    color: #22222280;
+    color: transparent(50%);
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 8px;
 }
