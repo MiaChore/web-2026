@@ -229,3 +229,75 @@
     margin-top: 0px;
     margin-bottom: 8px;
 }
+
+.profile {
+    font-family: "Golos UI", sans-serif;
+}
+
+.profile.pic {
+    margin-top: 24px;
+    width: 123px;
+    height: 123px;
+    border-radius: 10px;
+    margin-left: 51%;
+}
+
+.profile.name {
+    margin-left: 48.5%;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing:-0,25px;
+}
+
+.profile.description {
+    margin-left: 44%;
+    font-weight: 400px;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0,15px;
+    width: 361px;
+    height: 36px;
+    color: black;
+    text-align: center;
+}
+
+.profile.pic_counter {
+    width: 150px;
+    height: 35px;
+    align-content: center;
+    margin-left: 50%;
+    background-color: #edf2f8;
+    border-color: transparent;
+    border-radius: 6px;
+    display: flex;               
+}
+
+.profile.pic_counter.text {
+    line-height: 18px;
+    height: 18px;
+    letter-spacing: -0,15px;
+    font-weight: 400;
+    margin-right: auto;
+    margin: 9px;
+}
+
+.profile.pic_counter.icon {
+    width: 16px;
+    height: 16px;
+    margin: 9px;
+}
+
+.profile.content {
+    display: flex;
+    width: 972px;
+    height: 325px;
+    margin-left: 25%;
+}
+
+.profile.photos {
+    gap: 10px;
+    margin-right: 3px;
+    width: 322px;
+    height: 322px;
+}
