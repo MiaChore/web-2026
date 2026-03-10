@@ -94,6 +94,13 @@
     margin-left: 24px;
 }
 
+.icons.dot {
+    position: absolute;
+    margin-left: -14px;
+    margin-top: 60px;
+    height: 4px;
+}
+
 .icons.pen {
     margin: 0px;
     margin-left: auto;
