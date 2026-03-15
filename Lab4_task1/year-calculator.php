@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="styles.css" rel="stylesheet">
   <title>Calculator</title>
 </head>
 <body>
@@ -28,10 +27,11 @@
                         print '<img src="/media/yes.gif" alt="Всё верно">';
                     } else {
                         print "Год не високосный" . "<br>";
-                        print '<img src="/media/no.gif" alt="Всё верно">';
+                        print '<img src="/media/no.gif" alt="Неправильно">';
                     }
                 }
             }
+            
         ?>
     </h2>
 </div>
