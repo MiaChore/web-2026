@@ -1,0 +1,1 @@
+https://geocode-maps.yandex.ru/1.x/?apikey=649706be-8ce5-4c32-970b-ad65dc904c62&format=json&geocode=Республика Марий эл, г. Йошкар-Ола, ул. Бульвар Чавайна д. 36
