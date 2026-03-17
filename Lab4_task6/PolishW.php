@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
+  <title>Polish Writer</title>
 </head>
 <body>
   <div>
@@ -13,20 +13,27 @@
     <h2>
         <?php
 
-          function CalculateFactorial($c, $cycle, $n) {
-            if ($cycle >= $n) {
-              print($c);
+          $input = $_POST['math-example'];
+          $characters = explode(" ", trim($input));
+          $storage = [];
+          foreach ($characters as $ch) {
+            if (is_numeric($ch)) {
+              array_push($storage, (int)$ch);
             } else {
-              $c = $c * ($cycle + 1);
-              $cycle = $cycle +1;
-              CalculateFactorial($c, $cycle, $n);
+              $b = array_pop($storage);
+              $a = array_pop($storage);
+              if ($ch == '+') {
+                $storage[] = $a + $b;
+              }
+              if ($ch == '-') {
+                $storage[] = $a - $b;
+              }
+              if ($ch == '*') {
+                $storage[] = $a * $b;
+              }
             }
           }
-          
-          $number = $_POST['number'];
-          $c_number = 1;
-          $current_number = 1;
-          CalculateFactorial($c_number, $current_number, $number);
+          print ($storage[0]);
 
         ?>
     </h2>
