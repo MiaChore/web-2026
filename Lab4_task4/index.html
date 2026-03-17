@@ -9,9 +9,16 @@
     <body>
         <form action="lucky_ticket.php" method="post">
             <div>
-                <label for="Amount"></label>
-                <input type="text" name="amount" placeholder="Введите первый номер" class="input">
+                <label for="number-first"></label>
+                <input type="text" name="number-first" minlength="6" maxlength="6" 
+                placeholder="Введите первый номер" class="input">
             </div>
-            <button class="button">Абудаб, анализ</button>      
+        <form action="lucky_ticket.php" method="post">
+            <div>
+                <label for="number-second"></label>
+                <input type="text" name="number-second" minlength="6" maxlength="6" 
+                placeholder="Введите второй номер" class="input">
+            </div>
+            <button class="button">Абудаб, анализ</button>            
     </body>
 </html>

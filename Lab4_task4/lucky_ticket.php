@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your sign</title>
+  <title>Lucky tickets</title>
 </head>
 <body>
   <div>
@@ -12,58 +12,23 @@
   <div>
     <h2>
         <?php
-        
-            $error_check = false; 
-            $date = $_POST['date'];
-            $month = [
-                'января' => 'january',
-                'февраля' => 'february',
-                'марта' => 'march',
-                'апреля' => 'april',
-                'мая' => 'may',
-                'июня' => 'june',
-                'июля' => 'july',
-                'августа' => 'august',
-                'сентября' => 'september',
-                'октября' => 'october',
-                'ноября' => 'november',
-                'декабря' => 'december',
-            ];
-            $zodiac = [ 'овен' => ['start' => 321, 'end' => 420],
-                    'телец' => ['start' => 421, 'end' => 521],
-                    'близнецы' => ['start' => 522, 'end' => 621],
-                    'рак' => ['start' => 622, 'end' => 722],
-                    'лев' => ['start' => 723, 'end' => 821],
-                    'дева' => ['start' => 822, 'end' => 923],
-                    'весы' => ['start' => 924, 'end' => 1023],
-                    'скорпион' => ['start' => 1024, 'end' => 1122],
-                    'стрелец' => ['start' => 1123, 'end' => 1222],
-                    'козерог' => ['start' => 1223, 'end' => 120],
-                    'водолей' => ['start' => 121, 'end' => 219],
-                    'рыбы' => ['start' => 220, 'end' => 320],
-            ];
-            $sorted_date = str_replace(array_keys($month), array_values($month), mb_strtolower($date));
-            $final_date = strtotime($sorted_date);
-            if (!$final_date) {
-                $error_check = true;
-            }
-            $md_num = (int)date('md', $final_date);
-            foreach ($zodiac as $sign => $code_m) {
-                if ($sign == 'козерог') {
-                    if ($md_num >= $code_m['start'] or $md_num <= $code_m['end']) {
-                        $search_z = $sign;
-                    }
-                } else {
-                    if ($md_num >= $code_m['start'] and $md_num <= $code_m['end']) {
-                        $search_z = $sign;
-                    }
-                }    
-            }
-            if ($error_check == true) {
-                print "Ошибка: формат даты неправильный";
-            } else {
-                print "Твой знак зодиака " . $search_z;
-            }
+
+          function CheckTicket($f, $s) {
+            while ($f <= $s) {
+              $str = (string)$f;
+              $left = (int)$str[0] + (int)$str[1] + (int)$str[2];
+              $right = (int)$str[3] + (int)$str[4] + (int)$str[5];
+              if ($left == $right) {
+                print ("$f<br>");
+              }
+              $f++; 
+            } 
+          }
+          
+          $first_number = $_POST['number-first'];
+          $second_number = $_POST['number-second'];
+          CheckTicket($first_number, $second_number);
+
         ?>
     </h2>
 </div>
