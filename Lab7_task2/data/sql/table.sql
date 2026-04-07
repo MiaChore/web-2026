@@ -1,0 +1,16 @@
+CREATE TABLE `blog1`.`user` (
+  `id` INT UNSIGNED NOT NULL,
+  `user` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  UNIQUE INDEX `user_UNIQUE` (`user` ASC) VISIBLE);
+
+CREATE TABLE `blog1`.`post` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `pfp` BLOB NULL,
+  `post_pic` BLOB NULL,
+  `subtitle` VARCHAR(100) NULL,
+  `like` INT UNSIGNED NULL,
+  `time_ago` DATETIME NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);  

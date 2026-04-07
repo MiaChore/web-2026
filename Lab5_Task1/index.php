@@ -15,14 +15,12 @@
                     'subtitle' => 'subtitle',
                     'img_modifier' => '',
                     'author' => 'me',
-                    // другие свойства этого поста
                 ],
                 [
                     'title' => 'New Album',
                     'subtitle' => 'Самый желанный из меню<br>Я никогда не изменю',
                     'img_modifier' => '',
                     'author' => 'Sqwoz Bab',
-                    // свойства второго поста
                 ],
             ];
             
