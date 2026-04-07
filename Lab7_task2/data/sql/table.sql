@@ -7,10 +7,10 @@ CREATE TABLE `blog1`.`user` (
 
 CREATE TABLE `blog1`.`post` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `pfp` BLOB NULL,
-  `post_pic` BLOB NULL,
-  `subtitle` VARCHAR(100) NULL,
-  `like` INT UNSIGNED NULL,
+  `pfp` VARCHAR(200) NULL,
+  `post_pic` VARCHAR(200) NULL,
+  `subtitle` VARCHAR(200) NULL,
+  `like_amount` INT UNSIGNED NULL,
   `time_ago` DATETIME NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);  
