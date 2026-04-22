@@ -1,6 +1,5 @@
 function isPrimeNumber(n) {
     let isPrime
-
     if (typeof n == 'object') {
         for (let i = 0; i < n.length; i++) {
             if (typeof n[i] == 'number') {
@@ -47,7 +46,3 @@ function isPrimeNumber(n) {
         }
     }
 }
-
-
-
-
