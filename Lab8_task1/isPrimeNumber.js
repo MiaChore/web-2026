@@ -1,46 +1,55 @@
-function isPrimeNumber(n) {
-    let isPrime
-    if (typeof n == 'object') {
-        for (let i = 0; i < n.length; i++) {
-            if (typeof n[i] == 'number') {
-                if (n[i] > 2) {
-                    isPrime = true
-                    for (let j = 2; j < n[i]; j++) {
-                        if (n[i] % j == 0) {
-                            isPrime = false
-                            break
-                        }
-                    }
-                    if (isPrime) {
-                        console.log('Результат ', n[i], ' простое число')
-                    } else {
-                        console.log('Результат ', n[i], ' не простое число')
-                    }
-                } else {
-                    console.log('Ошибка: ', n[i], ' не может быть простым')
-                }
-            } else {
-                console.log('Ошибка: ', n[i], '- это неправильный формат')
-            }       
-        } 
-    } else {
-        if (typeof n == 'number') {
-            if (n > 1) {
+function checkForArray(n) {
+    n.forEach(element => {
+        let isPrime
+        if (typeof element == 'number') {
+            if (element > 1) {
                 isPrime = true
-                for (let j = 2; j < n; j++) {
-                    if (n % j == 0) {
+                for (let j = 2; j < element; j++) {
+                    if (element % j == 0) {
                         isPrime = false
                         break
                     }
                 }
                 if (isPrime) {
-                    console.log('Результат ', n, ' простое число')
+                    console.log('Результат ', element, ' простое число')
                 } else {
-                    console.log('Результат ', n, ' не простое число')
+                    console.log('Результат ', element, ' не простое число')
                 }
             } else {
-                console.log('Ошибка: ', n, ' не может быть простым')
+                console.log('Ошибка: ', element, ' не может быть простым')
             }
+        } else {
+            console.log('Ошибка: ', element, '- это неправильный формат')
+        }       
+    })
+}
+
+function checkForNumber(n) {
+    let isPrime
+    if (n > 1) {
+        isPrime = true
+        for (let j = 2; j < n; j++) {
+            if (n % j == 0) {
+                isPrime = false
+                break
+            }
+        }
+        if (isPrime) {
+            console.log('Результат ', n, ' простое число')
+        } else {
+            console.log('Результат ', n, ' не простое число')
+        }
+    } else {
+        console.log('Ошибка: ', n, ' не может быть простым')
+    }
+}
+
+function isPrimeNumber(n) {
+    if (typeof n == 'object') {
+        checkForArray(n)
+    } else {
+        if (typeof n == 'number') {
+            checkForNumber(n)
         } else {
             console.log('Ошибка: ', n, '- это неправильный формат')
         }

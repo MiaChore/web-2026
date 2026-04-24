@@ -1,6 +1,4 @@
-function mergeObjects(obj1, obj2) {
-    let result = {}
-    let element = ''
+function errorCheck(obj1, obj2) {
     let objError = false
     if (typeof obj1 !== 'object') {
         console.log('Ошибка: Первый объект обладает неправильным форматом')
@@ -12,21 +10,22 @@ function mergeObjects(obj1, obj2) {
         }
     }
     if (typeof obj2 !== 'object') {
-        console.log('Ошибка: Первый объект обладает неправильным форматом')
+        console.log('Ошибка: Второй объект обладает неправильным форматом')
         objError = true
     } else {
         if (Object.keys(obj2) == 0) {
             console.log('Ошибка: Второй объект пуст')
             objError = true
         }
-    }  
+    }
+    return objError  
+}
+
+function mergeObjects(obj1, obj2) {
+    let result = {}
+    let element = ''
+    let objError = errorCheck(obj1, obj2)
     if (objError == false) {
-        for (element in obj1) {
-            result[element] = obj1[element]
-        }
-        for (element in obj2) {
-            result[element] = obj2[element]
-        }
-        console.log(result)
+        console.log(Object.assign(obj1, obj2))
     }    
 }
