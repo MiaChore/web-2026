@@ -14,47 +14,54 @@
         <?php
 
             function converter($n) {
-                if ($n == 1) {
-                    print "Один";
-                } else {
-                    if ($n == 2) {
-                    print "Два";
-                    } else {
-                        if ($n == 3) {
-                            print "Три";
-                        } else {
-                            if ($n == 4) {
-                                print "Четыре";
-                            } else {
-                                if ($n == 5) {
-                                    print "Пять";
-                                } else {
-                                    if ($n == 6) {
-                                        print "Шесть";
-                                    } else {
-                                        if ($n == 7) {
-                                            print "Семь";
-                                        } else {
-                                            if ($n == 8) {
-                                                print "Восемь";
-                                            } else {
-                                                if ($n == 9) {
-                                                    print "Девять";
-                                                } else {
-                                                    if ($n == 0) {
-                                                        print "Ноль";
-                                                    } else {
-                                                        print "Ошибка: неправильный ввод";
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }                                           
+                switch ($n) {
+                    case 1:
+                        echo('Один');
+                        break;
+                    
+                    case 2:
+                        echo('Два');
+                        break;
+
+                    case 3:
+                        echo('Три');
+                        break;
+
+                    case 4:
+                        echo('Четыре');
+                        break;
+
+                    case 5:
+                        echo('Пять');
+                        break;
+
+                    case 6:
+                        echo('Шесть');
+                        break;
+
+                    case 7:
+                        echo('Семь');
+                        break;
+
+                    case 8:
+                        echo('Восемь');
+                        break;
+
+                    case 9:
+                        echo('Девять');
+                        break;
+
+                    case 0:
+                        echo('Ноль');
+                        break;
+
+                    case '':
+                        echo('Ввод пуст');
+                        break;    
+
+                    default:
+                        echo('Неправильный ввод');
+                }
             }
             
             converter($_POST['number'])

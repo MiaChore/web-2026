@@ -11,7 +11,7 @@
 </div>
   <div>
     <h2>
-        <?php
+      <?php
 
           $input = $_POST['math-example'];
           $characters = explode(" ", trim($input));

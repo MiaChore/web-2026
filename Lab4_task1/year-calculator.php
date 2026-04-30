@@ -14,23 +14,19 @@
         <?php
 
             $year = $_POST['year'];
-            if (empty($year)) {
+            if ($year == '') {
                 print "А где год..." . "<br>";
-                print '<img src="/media/no-year.gif" alt="Форма пустая">';
-            } else {
-                if ($year % 400 == 0) {
+                print '<img src="media/no-year.gif" alt="Форма пустая">';
+            } else if ($year % 400 == 0) {
                     print "Год високосный" . "<br>";
-                    print '<img src="/media/yes.gif" alt="Всё верно">';
+                    print '<img src="media/yes.gif" alt="Всё верно">';
+                } else if ($year % 4 == 0) {
+                    print "Год високосный" . "<br>";
+                    print '<img src="media/yes.gif" alt="Всё верно">';       
                 } else {
-                    if ($year % 4 == 0) {
-                        print "Год високосный" . "<br>";
-                        print '<img src="/media/yes.gif" alt="Всё верно">';
-                    } else {
-                        print "Год не високосный" . "<br>";
-                        print '<img src="/media/no.gif" alt="Неправильно">';
-                    }
+                    print "Год не високосный" . "<br>";
+                    print '<img src="media/no.gif" alt="Неправильно">';
                 }
-            }
             
         ?>
     </h2>

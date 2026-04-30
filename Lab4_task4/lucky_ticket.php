@@ -14,15 +14,19 @@
         <?php
 
           function CheckTicket($f, $s) {
-            while ($f <= $s) {
-              $str = (string)$f;
-              $left = (int)$str[0] + (int)$str[1] + (int)$str[2];
-              $right = (int)$str[3] + (int)$str[4] + (int)$str[5];
-              if ($left == $right) {
-                print ("$f<br>");
-              }
-              $f++; 
-            } 
+            if ($f > $s) {
+              echo('Ошибка: Первое число больше второго');
+            } else {
+              while ($f <= $s) {
+                $str = (string)$f;
+                $left = (int)$str[0] + (int)$str[1] + (int)$str[2];
+                $right = (int)$str[3] + (int)$str[4] + (int)$str[5];
+                if ($left == $right) {
+                  print ("$f<br>");
+                }
+                $f++; 
+              } 
+            }
           }
           
           $first_number = $_POST['number-first'];

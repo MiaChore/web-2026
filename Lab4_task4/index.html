@@ -10,15 +10,14 @@
         <form action="lucky_ticket.php" method="post">
             <div>
                 <label for="number-first"></label>
-                <input type="text" name="number-first" minlength="6" maxlength="6" 
+                <input type="text" name="number-first" pattern="\d{6}" required 
                 placeholder="Введите первый номер" class="input">
             </div>
-        <form action="lucky_ticket.php" method="post">
             <div>
                 <label for="number-second"></label>
-                <input type="text" name="number-second" minlength="6" maxlength="6" 
+                <input type="text" name="number-second" pattern="\d{6}" required 
                 placeholder="Введите второй номер" class="input">
             </div>
-            <button class="button">Абудаб, анализ</button>            
+            <button class="button">Абудаб, анализ</button>
     </body>
 </html>
