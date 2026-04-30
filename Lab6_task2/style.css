@@ -148,6 +148,7 @@
     width: 72px;
     border-right: 1px;
     border-color: black;
+    position: fixed
 }
 
 .header {
@@ -320,7 +321,7 @@
     font-weight: 400;
     margin-right: auto;
     margin: 9px;
-    
+    font-weight: bold;
 }
 
 .profile.pic_counter.icon {
