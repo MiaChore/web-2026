@@ -11,7 +11,7 @@ CREATE TABLE `blog1`.`post` (
   `user_id` INT UNSIGNED NOT NULL,
   `post_pic` VARCHAR(200) NULL,
   `description` VARCHAR(200) NULL,
-  `like_amount` INT UNSIGNED NULL,
+  `like_amount` INT UNSIGNED NULL DEFAULT 0,
   `post_time` DATETIME NOT NULL,
   PRIMARY KEY (`id_post`),
   UNIQUE INDEX `id_post_UNIQUE` (`id_post` ASC) VISIBLE);

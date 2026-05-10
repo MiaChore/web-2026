@@ -16,7 +16,7 @@
             <img src="../../media/Plus.png" alt="Add" class="icons">
        </div>
        <div class="headband">
-            <h1 class="header">Легенды ПС-12</h1>
+            <h1 class="header"></h1>
        </div>
        <div class="scroll_bar">
             <?php
@@ -29,7 +29,7 @@
                     );
                 }
 
-                function getPosts(PDO $connection): array {
+                function getPosts(PDO $connection) {
                     $query = "
                         SELECT
                             post.*,
@@ -46,9 +46,9 @@
                     return $statement->fetchAll(PDO::FETCH_ASSOC);
                 }
 
-                function getTimeAgo($datetime): string {
-                    $timestamp = strtotime($datetime);
-                    $difference = time() - $timestamp;
+                function getTimeAgo($datetime) {
+                    $post_time = strtotime($datetime);
+                    $difference = time() - $post_time;
                     switch (true) {
                         case $difference < 60:
                             return 'только что';
