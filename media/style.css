@@ -13,6 +13,30 @@
     height: 251px;
 }
 
+.login_pic {
+    width: 730px;
+}
+
+.login_pic.photo {
+    width: 462px;
+    height: 501px;
+    margin-top: 289px;
+    margin-left: 269px;
+}
+
+.login_email {
+    height: 88px;
+}
+
+.login_password {
+    margin-top: 5px;
+}
+
+.login_input {
+    width: 343px;
+    gap: 16px;
+}
+
 .title {
     font-family: "Golos UI", sans-serif;
     font-weight: 700;
@@ -94,6 +118,10 @@
     margin-left: 24px;
 }
 
+.icons.home {
+    margin-top: 32px;
+}
+
 .icons.dot {
     position: absolute;
     margin-left: -14px;
@@ -120,6 +148,7 @@
     width: 72px;
     border-right: 1px;
     border-color: black;
+    position: fixed
 }
 
 .header {
@@ -140,6 +169,11 @@
     margin-top: 73px;
     display: block;
     gap: 16px;
+}
+
+.post {
+    width: 474px;
+    height: 700px;
 }
 
 .user_bar {
@@ -270,7 +304,14 @@
     background-color: #edf2f8;
     border-color: transparent;
     border-radius: 6px;
-    display: flex;               
+    display: flex;
+    margin-bottom: 43px;               
+}
+
+.profile_info {
+    width: 1621.65px;
+    height: 329px;
+    margin-top: 73px;
 }
 
 .profile.pic_counter.text {
@@ -280,6 +321,7 @@
     font-weight: 400;
     margin-right: auto;
     margin: 9px;
+    font-weight: bold;
 }
 
 .profile.pic_counter.icon {

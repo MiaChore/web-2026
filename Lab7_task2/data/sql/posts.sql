@@ -1,24 +1,36 @@
-INSERT INTO 
-    post (
-        pfp,
-        post_pic,
-        subtitle,
-        like_amount,
-        time_ago       
-    )
-VALUES (
-    'G:\web-2026\media/user_first.jpg',
-    'G:\web-2026\media/block_2.png',
-    'Так красиво сегодня на улице! Настоящая зима)) 
-    Вспоминается Бродский: «Поздно ночью, в уснувшей долине, на самом дне...',
-    '200',
-    '2026-04-07 14:30:00'    
+INSERT INTO user (
+    nickname,
+    pfp
+)
+VALUES
+(
+    'Максим Крылов',
+    '../../media/user_first.jpg'
 ),
 (
-    'G:\web-2026\media/user_second.jpg',
-    'G:\web-2026\media/friends.png',
-    'Так красиво сегодня на улице! Настоящая зима)) 
-    Вспоминается Бродский: «Поздно ночью, в уснувшей долине, на самом дне...',
-    '200',
-    '2024-02-01 08:10:30'    
+    'Егор Шевчук',
+    '../../media/user_second.jpg'
+);
+
+INSERT INTO post (
+    user_id,
+    post_pic,
+    description,
+    like_amount,
+    post_time
 )
+VALUES
+(
+    1,
+    '../../media/block_2.png',
+    'Первый пост',
+    200,
+    '2026-04-07 14:30:00'
+),
+(
+    2,
+    '../../media/block_3.png',
+    'Второй пост',
+    150,
+    '2026-04-08 18:20:00'
+);

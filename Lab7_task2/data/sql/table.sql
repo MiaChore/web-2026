@@ -1,16 +1,17 @@
 CREATE TABLE `blog1`.`user` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user` VARCHAR(45) NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  UNIQUE INDEX `user_UNIQUE` (`user` ASC) VISIBLE);
+  `user_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nickname` VARCHAR(45) NULL,
+  `pfp` VARCHAR(200) NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE INDEX `user_id_UNIQUE` (`user_id` ASC) VISIBLE,
+  UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC) VISIBLE);
 
 CREATE TABLE `blog1`.`post` (
-  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `pfp` VARCHAR(200) NULL,
+  `id_post` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` INT UNSIGNED NOT NULL,
   `post_pic` VARCHAR(200) NULL,
-  `subtitle` VARCHAR(200) NULL,
+  `description` VARCHAR(200) NULL,
   `like_amount` INT UNSIGNED NULL,
-  `time_ago` DATETIME NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);  
+  `post_time` DATETIME NOT NULL,
+  PRIMARY KEY (`id_post`),
+  UNIQUE INDEX `id_post_UNIQUE` (`id_post` ASC) VISIBLE);
