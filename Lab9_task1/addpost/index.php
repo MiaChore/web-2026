@@ -4,22 +4,20 @@
         <title>Home</title>
         <meta charset="utf-8">
         <link href="../../media/style.css" rel="stylesheet">
-        </style>
     </head>
     <body class="block">
-       <div class="back">
+        <div class="back">
             <div>
                 <img src="../../media/Home_page.png" alt="Home page" class="icons" style="margin-top: 32px;">
                 <img src="../../media/dot.png" alt="Dot" class="icons dot">
             </div>
             <img src="../../media/Profile.png" alt="Profile" class="icons">
             <img src="../../media/Plus.png" alt="Add" class="icons">
-       </div>
-       <div class="headband">
+        </div>
+        <div class="headband">
             <h1 class="header"></h1>
-       </div>
-       <div class="scroll_bar">
-        
+        </div>
+        <div class="scroll_bar">        
             <?php
 
                 function connectDatabase(): PDO {
@@ -47,37 +45,12 @@
                     return $statement->fetchAll(PDO::FETCH_ASSOC);
                 }
 
-                function getTimeAgo($datetime) {
-                    $post_time = strtotime($datetime);
-                    $difference = time() - $post_time;
-                    switch (true) {
-                        case $difference < 60:
-                            return 'только что';
-                        case $difference < 3600:
-                            $minutes = floor($difference / 60);
-                            return $minutes . ' мин назад';
-                        case $difference < 86400:
-                            $hours = floor($difference / 3600);
-                            return $hours . ' ч назад';
-                        case $difference < 2592000:
-                            $days = floor($difference / 86400);
-                            return $days . ' дн назад';
-                        case $difference < 31536000:
-                            $months = floor($difference / 2592000);
-                            return $months . ' мес назад';
-                        default:
-                            $years = floor($difference / 31536000);
-                            return $years . ' г назад';
-                    }  
-                }
-
                 $connection = connectDatabase();
-                $posts = getPosts($connection);
-                foreach ($posts as $post) {
-                    include 'post_preview.php';
-                }
 
             ?>
-       </div>
+            <div class="post_add">
+                🖼
+            </div>
+        </div>
     </body>
 </html>
