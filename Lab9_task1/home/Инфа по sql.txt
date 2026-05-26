@@ -1,0 +1,27 @@
+INSERT INTO post (
+    user_id,
+    post_pic,
+    post_pic2,
+    post_pic3,
+    description,
+    like_amount,
+    post_time
+)
+VALUES (
+    1,
+    '../../media/anime.png',
+    '../../media/cute_cat.png',
+    '../../media/rey.png',
+    'пепе',
+    67,
+    '2026-04-07 08:30:00'
+);
+
+INSERT INTO user (
+    nickname,
+    pfp
+)
+VALUES (
+    'Егор Шевчук',
+    '../../media/user_second.jpg'
+);
