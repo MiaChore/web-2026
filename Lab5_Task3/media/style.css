@@ -1,5 +1,5 @@
 .block {
-    width: 1920px;
+    width: 1900px;
     height: 1080px;
     margin: 0px;
     display: flex;
@@ -11,6 +11,30 @@
     margin-left: 107px;
     width: 343px;
     height: 251px;
+}
+
+.login_pic {
+    width: 730px;
+}
+
+.login_pic.photo {
+    width: 462px;
+    height: 501px;
+    margin-top: 289px;
+    margin-left: 269px;
+}
+
+.login_email {
+    height: 88px;
+}
+
+.login_password {
+    margin-top: 5px;
+}
+
+.login_input {
+    width: 343px;
+    gap: 16px;
 }
 
 .title {
@@ -38,7 +62,7 @@
     width: 343px;
     height: 16px;
     color: #808080;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .headlines {
@@ -94,6 +118,10 @@
     margin-left: 24px;
 }
 
+.icons.home {
+    margin-top: 32px;
+}
+
 .icons.dot {
     position: absolute;
     margin-left: -14px;
@@ -120,6 +148,7 @@
     width: 72px;
     border-right: 1px;
     border-color: black;
+    position: fixed
 }
 
 .header {
@@ -136,10 +165,15 @@
     width: 474px;
     height: 1338px;
     top: 73px;
-    margin-left: 670px;
+    margin-left: 730px;
     margin-top: 73px;
     display: block;
     gap: 16px;
+}
+
+.post {
+    width: 474px;
+    height: 700px;
 }
 
 .user_bar {
@@ -212,7 +246,6 @@
 
 .comments {
     width: 474px;
-    height: 37px;
     font-family: "Golos UI", sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -226,7 +259,7 @@
     color: #22222280;
     color: transparent(50%);
     font-size: 14px;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 8px;
 }
 
@@ -270,34 +303,6 @@
     background-color: #edf2f8;
     border-color: transparent;
     border-radius: 6px;
-    display: flex;               
-}
-
-.profile.pic_counter.text {
-    line-height: 18px;
-    height: 18px;
-    letter-spacing: -0,15px;
-    font-weight: 400;
-    margin-right: auto;
-    margin: 9px;
-}
-
-.profile.pic_counter.icon {
-    width: 16px;
-    height: 16px;
-    margin: 9px;
-}
-
-.profile.content {
     display: flex;
-    width: 972px;
-    height: 325px;
-    margin-left: 25%;
-}
-
-.profile.photos {
-    gap: 10px;
-    margin-right: 3px;
-    width: 322px;
-    height: 322px;
+    margin-bottom: 43px;               
 }

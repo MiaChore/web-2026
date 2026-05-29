@@ -13,29 +13,44 @@
     <h2>
       <?php
 
-          $input = $_POST['math-example'];
-          $characters = explode(" ", trim($input));
-          $storage = [];
-          foreach ($characters as $ch) {
-            if (is_numeric($ch)) {
-              array_push($storage, (int)$ch);
-            } else {
-              $b = array_pop($storage);
-              $a = array_pop($storage);
-              if ($ch == '+') {
-                $storage[] = $a + $b;
-              }
-              if ($ch == '-') {
-                $storage[] = $a - $b;
-              }
-              if ($ch == '*') {
-                $storage[] = $a * $b;
-              }
-            }
-          }
-          print ($storage[0]);
+        $input = $_POST['math-example'];
+        $stack = [];
+        $top = -1;
 
-        ?>
+        for ($i = 0; isset($input[$i]); $i++) {
+          $ch = $input[$i];
+          if ($ch >= '0' && $ch <= '9') {
+            $top++;
+            $stack[$top] = (int)$ch;
+          }
+          if ($ch == '+' ) {
+            $b = $stack[$top];
+            $top--;
+            $a = $stack[$top];
+            $top--;
+            $top++;
+            $stack[$top] = $a + $b;
+          }
+          if ($ch == '-') {
+            $b = $stack[$top];
+            $top--;
+            $a = $stack[$top];
+            $top--;
+            $top++;
+            $stack[$top] = $a - $b;
+          }
+          if ($ch == '*') {
+            $b = $stack[$top];
+            $top--;
+            $a = $stack[$top];
+            $top--;
+            $top++;
+            $stack[$top] = $a * $b;
+          }
+        }
+        echo $stack[0];
+
+      ?>
     </h2>
 </div>
 </body>

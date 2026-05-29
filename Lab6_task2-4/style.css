@@ -1,5 +1,5 @@
 .block {
-    width: 1920px;
+    width: 1900px;
     height: 1080px;
     margin: 0px;
     display: flex;
@@ -331,15 +331,15 @@
 }
 
 .profile.content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 322px);
     width: 972px;
     height: 325px;
     margin-left: 25%;
+    gap: 5px;
 }
 
 .profile.photos {
-    gap: 10px;
-    margin-right: 3px;
     width: 322px;
     height: 322px;
 }

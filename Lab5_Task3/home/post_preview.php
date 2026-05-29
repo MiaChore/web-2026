@@ -1,9 +1,9 @@
-<div style="width: 474px; height: 700px;">
+<div class="post_block">
   <div class="user_bar">
     <img src="<?= $post['user-photo'] ?>" alt="<?= $post['author'] ?>" 
     class="user_photo">
     <h2 class="nickname"><a nick= '<?= $post['author'] ?>' 
-    href='/post?id=<?= $post['id'] ?>'>
+    href='/Lab5_Task3/home/post.php?postId=<?= $post['id'] ?>'>
     <?= $post['author'] ?></h2>
     </a>
     <img src="../media/pen.svg" alt="Edit" class="icons pen">
@@ -16,8 +16,8 @@
     <h2 class="react_border counter"><?= $post['likes'] ?></h2>    
   </div>
   <div>
-    <h3 class="comments"><?= $post['subtitle'] ?></h3>
-    <h3 class="comments description">ещё</h3>
-    <h3 class="comments description"><?= $post['post-time'] ?></h3>
+    <p class="comments"><?= $post['subtitle'] ?></p>
+    <p class="comments description">ещё</p>
+    <p class="comments description"><?= $post['post-time'] ?></p>
   </div>
 </div>

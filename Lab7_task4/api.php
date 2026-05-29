@@ -30,7 +30,7 @@ if (!$errorCheck) {
             $imageName = uniqid('img_') . '_' . basename($image['name']);
             $imagePath = '../images/' . $imageName;
             move_uploaded_file($image['tmp_name'], $imagePath);
-            $dbImagePath = '../images/' . $imageName;
+            $dbImagePath = '../../images/' . $imageName;
             $connection = connectDatabase();
             $query = "
                 INSERT INTO 

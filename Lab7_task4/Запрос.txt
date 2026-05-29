@@ -1,0 +1,1 @@
+http://localhost/Lab7_Task4/api.php?Content-Type=aplication/json
