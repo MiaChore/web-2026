@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Логин</title>
+        <meta charset="utf-8">
+        <link href="../../media/style.css" rel="stylesheet">
+    </head>
+    <body class="block">
+        <div class="login_pic">
+            <h1 class="title">Войти</h1>
+            <img src="../../media/smiling_guy.png" class="login_pic photo" alt="Улыбающийся парень">   
+        </div>
+        <div class="login">
+            <div id="loginError" class="login_error">
+                🤓 Поля обязательные
+            </div>
+            <div class="login_input">
+                <div class="login_email">
+                    <h1 class="headlines">Электропочта</h1>
+                    <input class="input" id="emailInput" type="text">
+                    <h1 class="description">Введите электропочту в формате *****@***.**</h1>
+                </div>
+                <div class="login_password">
+                    <h1 class="headlines">Пароль</h1>
+                    <input class="input" id="passwordInput" type="text">
+                    <img src="../../media/eye.png" alt="Глаз" class="eye" >
+                </div>
+            </div>
+            <div>
+                <button class="button" id="loginButton">Продолжить</button>
+            </div>
+        </div>    
+    </body>
+    <script src="login.js"></script>
+</html>

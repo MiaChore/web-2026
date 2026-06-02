@@ -12,7 +12,7 @@
     </h2>
     <img
       src="../../media/pen.svg"
-      alt="Edit"
+      alt="Редактировать"
       class="icons pen"
     >
   </div>
@@ -43,38 +43,34 @@
       >
 
     <?php endforeach; ?>
-    
     <?php if (count($images) > 1): ?>
-
         <button class="arrow left_arrow">‹</button>
-
         <button class="arrow right_arrow">›</button>
-
         <div class="photo_counter">
           1/<?= count($images) ?>
         </div>
 
     <?php endif; ?>
   </div>   
-  <div class="react_border">
+  <div class="react_border like_button" data-post-id="<?= $post['id_post'] ?>">
     <img
       src="../../media/like.png"
-      alt="Likes"
+      alt="Лайки"
       class="react_border likes"
     >
     <h2 class="react_border counter">
       <?= $post['like_amount'] ?>
     </h2>
   </div>
-  <div>
-    <p class="post_text">
+  <div class="bottom_text">
+    <span class="post_text">
       <?= $post['description'] ?>
-    </p>
+    </span>
     <button class="more_button">
       Ещё
     </button>
-    <p class="comments description">
+    <div class="post_date"> 
       <?= getTimeAgo($post['post_time']) ?>
-    </p>
+    </div>
   </div>
 </div>

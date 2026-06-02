@@ -5,7 +5,8 @@ INSERT INTO post (
     post_pic3,
     description,
     like_amount,
-    post_time
+    post_time,
+    liked
 )
 VALUES (
     1,
@@ -14,14 +15,19 @@ VALUES (
     '../../media/rey.png',
     'пепе',
     67,
-    '2026-04-07 08:30:00'
+    '2026-04-07 08:30:00',
+    0
 );
 
 INSERT INTO user (
     nickname,
-    pfp
+    pfp,
+    email,
+    password
 )
 VALUES (
     'Егор Шевчук',
-    '../../media/user_second.jpg'
+    '../../media/user_second.jpg',
+    maks@mail.ru,
+    1234
 );

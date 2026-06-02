@@ -1,8 +1,23 @@
 .block {
     width: 1900px;
-    height: 1080px;
+    height: 100vh;
     margin: 0px;
     display: flex;
+}
+
+.login_error {
+    width: 325px;
+    height: 52px;
+    background-color: #F9EAEA;
+    color: #A30000;
+    border-radius: 10px;
+    font-family: "Golos UI", sans-serif;
+    font-size: 15px;
+    line-height: 52px;
+    margin-bottom: 24px;
+    visibility: hidden;
+    padding-left: 15px;
+    
 }
 
 .login {
@@ -29,7 +44,7 @@
 }
 
 .login_password {
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .login_input {
@@ -62,7 +77,8 @@
     width: 343px;
     height: 16px;
     color: #808080;
-    margin-top: 10px;
+    margin-top: 60px;
+    position: absolute;
 }
 
 .headlines {
@@ -87,6 +103,8 @@
     padding-left: 15px;
     display: block; 
     margin-bottom: 5px;
+    outline: none;
+    position: absolute;
 }
 
 .eye {
@@ -109,6 +127,7 @@
    padding-left: 16px;
    border-radius: 10px;
    margin-top: 50px;
+   cursor: pointer;
 }
 
 .icons {
@@ -116,6 +135,7 @@
     filter: invert(100%);
     margin-top: 16px;
     margin-left: 24px;
+    cursor: pointer;
 }
 
 .icons.home {
@@ -141,14 +161,15 @@
     height: 73px;
     margin-left: 72px;
     background-color: white;
+    z-index: 1000;
 }
 
 .back {
-    height: 1080px;
+    height: 100vh;
     width: 72px;
-    border-right: 1px;
-    border-color: black;
-    position: fixed
+    border-right: 1px solid #ddd;
+    position: fixed;
+    z-index: 1001;
 }
 
 .header {
@@ -163,12 +184,14 @@
 
 .scroll_bar {
     width: 474px;
-    height: 1338px;
     top: 73px;
     margin-left: 720px;
     margin-top: 73px;
     display: block;
-    gap: 16px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 73px);
 }
 
 .post {
@@ -217,12 +240,14 @@
 
 .react_border {
     margin-top: 16px;
+    margin-bottom: 8px;
     background-color: #edf2f8;
     border-color: transparent;
     border-radius: 5px;
     display: flex;
     width: 68px;
     height: 30px;
+    cursor: pointer;
 }
 
 .react_border.likes {
@@ -254,10 +279,14 @@
     margin-bottom: 0px;
 }
 
-.comments.description {
+.post_date {
     height: 18px;
-    color: #22222280;
-    color: transparent(50%);
+    font-family: "Golos UI", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0,15px;
+    color: #808080;
     font-size: 14px;
     margin-top: 10px;
     margin-bottom: 8px;
@@ -369,13 +398,14 @@
 
 .post_block {
     width: 474px;
-    height: 700px;
+
 }
 
 .photo_post {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .left_arrow {
@@ -493,13 +523,108 @@
     font-size: 14px;
 }
 
-.post_add {
+.post_add_main_block {
     width: 474px;
     height: 474px;
+    background-color: #F2F3F5;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-.post_add.icons {
+.post_add_icons {
     width: 143px;
-    height: 158px;
-    display: flex;
+    height: 143px;
+    margin-top: 25%;
+    margin-left: 35%;
 }
+
+.button_add {
+   width: 143px;
+   height: 48px;
+   background-color: black;
+   color: white;
+   font-family: "Golos UI", sans-serif;
+   font-weight: 500;
+   font-style: medium;
+   font-size: 15px;                    
+   padding-right: 16px;
+   padding-left: 16px;
+   border-radius: 10px;
+   align-self: center;
+   cursor: pointer;
+}
+
+.button_add.main_block {
+    margin-right: 30px;
+    margin-left: 35%;
+    margin-top: 20px;
+}
+
+.button_add.little_button {
+    color: #3F8AE0 ;
+    margin-top: 20px;
+    display: flex;
+    background-color:transparent ;
+    width: 140px;
+    height: 30px;
+    padding: 0px;
+    border-color: transparent;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.add_post {
+    font-family: "Golos UI", sans-serif;
+    align-self: flex-start;
+}
+
+.add_post.icon {
+    width: 16px;
+    height: 16px;
+    align-self: center;
+}
+
+.add_post.add_photo {
+    height: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;                    
+    padding-left: 5px;
+    align-self: center;
+}
+
+.add_post.add_description {
+    width: 474px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.add_post.share {
+    border-radius: 10px;
+    height: 48px;
+    width: 140px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: 32px;
+    background-color: #B4B4B4;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.share:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.post_preview {
+    width: 474px;
+    height: 474px;
+    object-fit: contain;
+    display: none;
+}
+

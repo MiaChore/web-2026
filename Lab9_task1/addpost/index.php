@@ -8,11 +8,11 @@
     <body class="block">
         <div class="back">
             <div>
-                <img src="../../media/Home_page.png" alt="Home page" class="icons" style="margin-top: 32px;">
-                <img src="../../media/dot.png" alt="Dot" class="icons dot">
+                <img src="../../media/Home_page.png" alt="Главная страница" class="icons" style="margin-top: 32px;">
+                <img src="../../media/dot.png" alt="Точка" class="icons dot">
             </div>
-            <img src="../../media/Profile.png" alt="Profile" class="icons">
-            <img src="../../media/Plus.png" alt="Add" class="icons">
+            <img src="../../media/Profile.png" alt="Профиль" class="icons">
+            <img src="../../media/Plus.png" alt="Добавить" class="icons">
         </div>
         <div class="headband">
             <h1 class="header"></h1>
@@ -48,9 +48,55 @@
                 $connection = connectDatabase();
 
             ?>
-            <div class="post_add">
-                🖼
+            <div class="post_add_main_block">
+                <div class="slider_container">
+                    <img
+                        src="../../media/painting.png"
+                        id="placeholderIcon"
+                        class="post_add_icons"
+                        alt="Добавить фото"
+                    >
+                    <img
+                        id="previewImage"
+                        class="post_preview"
+                        alt="Предпросмотр"
+                    >
+                    <button
+                        class="arrow left_arrow"
+                        id="leftArrow"
+                        style="display:none;"
+                    >
+                        ‹
+                    </button>
+                    <button
+                        class="arrow right_arrow"
+                        id="rightArrow"
+                        style="display:none;"
+                    >
+                        ›
+                    </button>
+                    <button class="button_add main_block" id="addPhotoMainButton">Добавить фото</button>
+                </div>
             </div>
-        </div>
+            <input
+                type="file"
+                id="photoInput"
+                hidden
+                multiple
+                accept="image/*"
+            > 
+            <button class="button_add little_button" id="addPhotoSecondaryButton">
+                <img src="../../media/add_photo.png" class="add_post icon"> 
+                <span class="add_post add_photo">Добавить фото</span>
+            </button>
+            <input
+                id="descriptionInput"
+                class="add_post add_description"
+                type="text"
+                placeholder="Добавьте подпись..."
+            >
+            <button id="shareButton" class="add_post share" disabled>Поделиться</button>
+        </div>        
     </body>
+    <script src="create_post.js"></script>
 </html>

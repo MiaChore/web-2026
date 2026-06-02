@@ -60,9 +60,7 @@ slidersForModal.forEach(function(slider) {
             modalCurrent = index;
             updateModal();
         });
-
     });
-
 });
 
 closeModal.addEventListener('click', function() {
@@ -86,7 +84,17 @@ function handleEsc(event) {
 function updateModal() {
     modalImage.src = modalImages[modalCurrent];
     const modalCounter = document.querySelector('.modal_counter');
-    modalCounter.textContent = (modalCurrent + 1) + '/' + modalImages.length;
+    if (modalImages.length <= 1) {
+        modalLeft.style.display = 'none';
+        modalRight.style.display = 'none';
+        modalCounter.style.display = 'none';
+        return;
+    }
+    modalLeft.style.display = 'flex';
+    modalRight.style.display = 'flex';
+    modalCounter.style.display = 'block';
+    modalCounter.textContent =
+        (modalCurrent + 1) + '/' + modalImages.length;
 }
 
 const modalLeft = document.querySelector('.modal_left');
