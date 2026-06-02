@@ -8,11 +8,30 @@
     <body class="block">
         <div class="back">
             <div>
-                <img src="../../media/Home_page.png" alt="Главная страница" class="icons" style="margin-top: 32px;">
+                <a href="">
+                    <img
+                        src="../../media/Home_page.png"
+                        alt="Главная страница"
+                        class="icons"
+                        style="margin-top: 32px;"
+                    >
+                </a>
                 <img src="../../media/dot.png" alt="Точка" class="icons dot">
             </div>
-            <img src="../../media/Profile.png" alt="Профиль" class="icons">
-            <img src="../../media/Plus.png" alt="Добавить" class="icons">
+            <a href="../../Lab6_task2-4/profile">
+                <img
+                    src="../../media/Profile.png"
+                    alt="Профиль"
+                    class="icons"
+                >
+            </a>
+            <a href="../addpost">
+                <img
+                    src="../../media/Plus.png"
+                    alt="Добавить пост"
+                    class="icons"
+                >
+            </a>    
         </div>
         <div class="headband">
             <h1 class="header"></h1>

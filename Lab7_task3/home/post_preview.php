@@ -1,4 +1,4 @@
-<div style="width: 474px; height: 700px;">
+<div class="post_block">
   <div class="user_bar">
     <img 
       src="<?= $post['pfp'] ?>"
@@ -33,15 +33,15 @@
       <?= $post['like_amount'] ?>
     </h2>
   </div>
-  <div>
-    <p class="comments">
+  <div class="bottom_text">
+    <span class="post_text">
       <?= $post['description'] ?>
-    </p>
-    <p class="comments description">
-      ещё
-    </p>
-    <p class="comments description">
+    </span>
+    <button class="more_button">
+      Ещё
+    </button>
+    <div class="post_date"> 
       <?= getTimeAgo($post['post_time']) ?>
-    </p>
+    </div>
   </div>
 </div>

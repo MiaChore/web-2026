@@ -7,12 +7,36 @@
     </head>
     <body class="block">
         <div class="back">
+            <a href="../home">
+                <img
+                    src="../../media/Home_page.png"
+                    alt="Главная страница"
+                    class="icons"
+                    style="margin-top: 32px;"
+                >
+            </a>
+                
+            <a href="../../Lab6_task2-4/profile">
+                <img
+                    src="../../media/Profile.png"
+                    alt="Профиль"
+                    class="icons"
+                >
+            </a>
             <div>
-                <img src="../../media/Home_page.png" alt="Главная страница" class="icons" style="margin-top: 32px;">
-                <img src="../../media/dot.png" alt="Точка" class="icons dot">
+                <a href="">
+                    <img
+                        src="../../media/Plus.png"
+                        alt="Добавить пост"
+                        class="icons"                
+                    >
+                </a> 
+                <img 
+                    src="../../media/dot.png" 
+                    alt="Точка" 
+                    class="icons dot" 
+                    style="margin-top: 44px;">
             </div>
-            <img src="../../media/Profile.png" alt="Профиль" class="icons">
-            <img src="../../media/Plus.png" alt="Добавить" class="icons">
         </div>
         <div class="headband">
             <h1 class="header"></h1>

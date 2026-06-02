@@ -313,7 +313,7 @@
 }
 
 .profile.description {
-    margin-left: 44%;
+    margin-left: 48.5%;
     font-weight: 400px;
     font-size: 15px;
     line-height: 18px;
@@ -338,7 +338,6 @@
 
 .profile_info {
     width: 1621.65px;
-    height: 329px;
     margin-top: 73px;
 }
 
@@ -359,15 +358,14 @@
 }
 
 .profile.content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 322px);
     width: 972px;
-    height: 325px;
     margin-left: 25%;
+    gap: 5px;
 }
 
 .profile.photos {
-    gap: 10px;
-    margin-right: 3px;
     width: 322px;
     height: 322px;
 }

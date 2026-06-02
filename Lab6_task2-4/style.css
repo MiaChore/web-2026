@@ -167,7 +167,8 @@
     top: 73px;
     margin-left: 670px;
     margin-top: 73px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
 }
 
